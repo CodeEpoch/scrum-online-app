@@ -1,0 +1,25 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+}
+.title {
+  margin: 8px;
+}
+.icon {
+  border-radius: 40px;
+}
+/* .navbar #user-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.navbar #user-logo:hover {
+  opacity: 0.8;
+} */
