@@ -1,0 +1,8 @@
+<app-toolbar></app-toolbar>
+<div *ngFor="let note of notes" [class.selected]="note === selectedNote" (click)="onSelect(note)">
+
+    <sticky-note [id]="note.id" [width]="note.width" [height]="note.height" [left]="note.left" [top]="note.top"
+        [content]="note.content">
+    </sticky-note>
+
+</div>

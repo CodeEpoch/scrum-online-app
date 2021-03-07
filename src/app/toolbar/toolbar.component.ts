@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { StickyNoteService } from '../services/stickyNote.service';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.css']
+  styleUrls: ['./toolbar.component.css'],
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
+  @Output() noteEvent = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(private noteService: StickyNoteService) {}
 
-  ngOnInit(): void {
+  addNote() {
+    this.noteService.addNote();
   }
-
 }
